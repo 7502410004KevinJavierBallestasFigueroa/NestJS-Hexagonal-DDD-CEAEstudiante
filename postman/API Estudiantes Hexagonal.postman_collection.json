@@ -1,0 +1,125 @@
+{
+	"info": {
+		"_postman_id": "215c07b2-258d-4f66-9cbd-bf9760156e8e",
+		"name": "API Estudiantes Hexagonal",
+		"description": "### Welcome to Postman! This is your first collection. \n\nCollections are your starting point for building and testing APIs. You can use this one to:\n\n• Group related requests\n• Test your API in real-world scenarios\n• Document and share your requests\n\nUpdate the name and overview whenever you’re ready to make it yours.\n\n[Learn more about Postman Collections.](https://learning.postman.com/docs/collections/collections-overview/)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "50623150",
+		"_collection_link": "https://kballestasf-305994.postman.co/workspace/Kevin-Ballestas's-Workspace~a72a3f30-f372-4062-8118-64dd277e0188/collection/50623150-215c07b2-258d-4f66-9cbd-bf9760156e8e?action=share&source=collection_link&creator=50623150"
+	},
+	"item": [
+		{
+			"name": "Listar estudiantes",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener Estudiante por ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/estudiantes/48734188-ad76-4921-858e-ea193839da27",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"estudiantes",
+						"48734188-ad76-4921-858e-ea193839da27"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear estudiante",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nombre\": \"Lina\",\r\n  \"apellido\": \"Fuentes\",\r\n  \"fechaNacimiento\": \"1997-01-06\",\r\n  \"semestre\": 1,\r\n  \"email\": \"lina@gmail.com\",\r\n  \"genero\": \"F\",\r\n  \"telefono\": \"3216516090\",\r\n  \"programa\": \"Ingenieria de Sistemas\",\r\n  \"universidad\": \"Universidad Javeriana\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/estudiantes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"estudiantes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar estudiante",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nombre\": \"Lina Luz\",\r\n  \"apellido\": \"Fuentes\",\r\n  \"fechaNacimiento\": \"1996-01-06\",\r\n  \"semestre\": 4,\r\n  \"email\": \"llfuentesq@gmail.com\",\r\n  \"genero\": \"F\",\r\n  \"telefono\": \"3015204250\",\r\n  \"programa\": \"Ingenieria de Sistemas\",\r\n  \"universidad\": \"Universidad Nacional\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/estudiantes/f9317879-ae36-4b79-9d1a-238c42c5c0f7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"estudiantes",
+						"f9317879-ae36-4b79-9d1a-238c42c5c0f7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar estudiante",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nombre\": \"Lina Luz\",\r\n  \"apellido\": \"Fuentes\",\r\n  \"fechaNacimiento\": \"1996-01-06\",\r\n  \"semestre\": 4,\r\n  \"email\": \"llfuentesq@gmail.com\",\r\n  \"genero\": \"F\",\r\n  \"telefono\": \"3015204250\",\r\n  \"programa\": \"Ingenieria de Sistemas\",\r\n  \"universidad\": \"Universidad Nacional\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/estudiantes/f9317879-ae36-4b79-9d1a-238c42c5c0f7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"estudiantes",
+						"f9317879-ae36-4b79-9d1a-238c42c5c0f7"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
