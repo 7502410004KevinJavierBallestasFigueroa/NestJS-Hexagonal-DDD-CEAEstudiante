@@ -1,0 +1,53 @@
+import { AggregateRoot } from '../shared/aggregate-root';
+import { Apellido } from './value-objects/apellido.vo';
+import { Email } from './value-objects/email.vo';
+import { EstudianteId } from './value-objects/estudiante-id.vo';
+import { FechaNacimiento } from './value-objects/fecha-nacimiento.vo';
+import { Genero } from './value-objects/genero.vo';
+import { Nombre } from './value-objects/nombre.vo';
+import { Programa } from './value-objects/programa.vo';
+import { Semestre } from './value-objects/semestre.vo';
+import { Telefono } from './value-objects/telefono.vo';
+import { Universidad } from './value-objects/universidad.vo';
+interface ActualizarProps {
+    nombre?: Nombre;
+    apellido?: Apellido;
+    fechaNacimiento?: FechaNacimiento;
+    semestre?: Semestre;
+    email?: Email;
+    genero?: Genero;
+    telefono?: Telefono;
+    programa?: Programa;
+    universidad?: Universidad;
+}
+export declare class Estudiante extends AggregateRoot {
+    readonly id: EstudianteId;
+    private _nombre;
+    private _apellido;
+    private _fechaNacimiento;
+    private _semestre;
+    private _email;
+    private _genero;
+    private _telefono;
+    private _programa;
+    private _universidad;
+    private _createdAt;
+    private _updatedAt?;
+    private constructor();
+    static create(nombre: Nombre, apellido: Apellido, fechaNacimiento: FechaNacimiento, semestre: Semestre, email: Email, genero: Genero, telefono: Telefono, programa: Programa, universidad: Universidad): Estudiante;
+    static restore(id: EstudianteId, nombre: Nombre, apellido: Apellido, fechaNacimiento: FechaNacimiento, semestre: Semestre, email: Email, genero: Genero, telefono: Telefono, programa: Programa, universidad: Universidad, createdAt: Date, updatedAt?: Date | null): Estudiante;
+    get nombre(): Nombre;
+    get apellido(): Apellido;
+    get fechaNacimiento(): FechaNacimiento;
+    get semestre(): Semestre;
+    get email(): Email;
+    get genero(): Genero;
+    get telefono(): Telefono;
+    get programa(): Programa;
+    get universidad(): Universidad;
+    get createdAt(): Date;
+    get updatedAt(): Date | null | undefined;
+    actualizar(props: ActualizarProps): void;
+    private ensureConsistencia;
+}
+export {};
